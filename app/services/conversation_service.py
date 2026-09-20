@@ -50,9 +50,14 @@ class ConversationService:
         role: str,
         content: str,
         model_name: str | None = None,
+        language: str | None = None,
     ) -> Message:
         message = Message(
-            conversation_id=conversation_id, role=role, content=content, model_name=model_name
+            conversation_id=conversation_id,
+            role=role,
+            content=content,
+            model_name=model_name,
+            language=language,
         )
         self.db.add(message)
         # Touch the conversation so conversation lists sort by recency.
@@ -75,3 +80,10 @@ class ConversationService:
         if conversation.messages and conversation.messages[-1].role == "assistant":
             self.db.delete(conversation.messages[-1])
             self.db.commit()
+
+    def get_last_user_message(self, conversation_id: str) -> Message | None:
+        conversation = self.get_conversation(conversation_id)
+        for message in reversed(conversation.messages):
+            if message.role == "user":
+                return message
+        return None

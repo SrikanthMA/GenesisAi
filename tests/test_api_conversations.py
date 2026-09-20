@@ -133,6 +133,72 @@ def test_send_message_surfaces_provider_error_instead_of_hanging(client: TestCli
     assert detail["messages"][-1]["content"] == "partial"
 
 
+def test_language_is_detected_and_mirrored_by_default(client: TestClient, fake_llm) -> None:
+    conversation_id = _create_conversation(client)
+    hindi_text = "यह एक परीक्षण वाक्य है जो हिंदी भाषा में लिखा गया है।"
+
+    with client.stream(
+        "POST",
+        f"/api/v1/conversations/{conversation_id}/messages",
+        json={"content": hindi_text},
+    ) as response:
+        list(response.iter_text())
+
+    detail = client.get(f"/api/v1/conversations/{conversation_id}").json()
+    user_message, assistant_message = detail["messages"]
+    assert user_message["language"] == "hi"
+    # Auto mode: the assistant is asked to mirror the detected language of the
+    # user's message, not the conversation's (still "auto") preferred_language.
+    assert assistant_message["language"] == "hi"
+
+
+def test_explicit_language_preference_overrides_detection(client: TestClient, fake_llm) -> None:
+    conversation_id = _create_conversation(client)
+
+    patch_response = client.patch(
+        f"/api/v1/conversations/{conversation_id}/language", json={"language": "ta"}
+    )
+    assert patch_response.status_code == 200
+    assert patch_response.json()["preferred_language"] == "ta"
+
+    with client.stream(
+        "POST",
+        f"/api/v1/conversations/{conversation_id}/messages",
+        json={"content": "This message is written in English."},
+    ) as response:
+        list(response.iter_text())
+
+    detail = client.get(f"/api/v1/conversations/{conversation_id}").json()
+    user_message, assistant_message = detail["messages"]
+    assert user_message["language"] == "en"
+    # Pinned to Tamil regardless of what language the user actually typed in.
+    assert assistant_message["language"] == "ta"
+
+
+def test_set_conversation_language_rejects_unsupported_code(client: TestClient) -> None:
+    conversation_id = _create_conversation(client)
+
+    response = client.patch(
+        f"/api/v1/conversations/{conversation_id}/language", json={"language": "xx"}
+    )
+
+    assert response.status_code == 422
+
+
+def test_set_language_on_missing_conversation_returns_404(client: TestClient) -> None:
+    response = client.patch(
+        "/api/v1/conversations/does-not-exist/language", json={"language": "hi"}
+    )
+    assert response.status_code == 404
+
+
+def test_list_languages(client: TestClient) -> None:
+    response = client.get("/api/v1/languages")
+    assert response.status_code == 200
+    codes = {entry["code"] for entry in response.json()}
+    assert {"en", "hi", "kn", "te", "ta", "ml", "mr", "bn", "gu", "pa", "ur"} == codes
+
+
 def test_delete_conversation(client: TestClient) -> None:
     conversation_id = _create_conversation(client)
 

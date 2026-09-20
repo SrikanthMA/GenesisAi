@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import conversations, health
+from app.api.routes import conversations, health, languages
 from app.core.config import get_settings
 from app.core.logging import setup_logging
 
@@ -20,3 +20,4 @@ app.add_middleware(
 
 app.include_router(health.router, prefix="/api/v1")
 app.include_router(conversations.router, prefix="/api/v1")
+app.include_router(languages.router, prefix="/api/v1")

@@ -16,7 +16,10 @@ class Conversation(TimestampMixin, Base):
     id: Mapped[str] = mapped_column(String(36), primary_key=True, default=new_uuid)
     user_id: Mapped[str] = mapped_column(String(36), ForeignKey("users.id"), nullable=False)
     title: Mapped[str | None] = mapped_column(String(255), nullable=True)
-    preferred_language: Mapped[str] = mapped_column(String(16), default="en", nullable=False)
+    # "auto" means: infer the response language per-message from what the user
+    # wrote (see app.ai.prompting.language_detection). Any other value pins the
+    # conversation to that language regardless of what the user types in.
+    preferred_language: Mapped[str] = mapped_column(String(16), default="auto", nullable=False)
     model_name: Mapped[str | None] = mapped_column(String(128), nullable=True)
 
     user: Mapped["User"] = relationship(back_populates="conversations")

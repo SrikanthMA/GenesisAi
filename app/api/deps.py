@@ -1,10 +1,12 @@
 from app.ai.llm.base import LLMProvider
 from app.ai.llm.huggingface_provider import HuggingFaceProvider
 from app.ai.orchestration.orchestrator import AIOrchestrator
+from app.ai.prompting.language_detection import LanguageDetectionService
 from app.core.config import get_settings
 from app.database.session import get_db
 
 _llm_provider: LLMProvider | None = None
+_language_detector = LanguageDetectionService()
 
 
 def get_llm_provider() -> LLMProvider:
@@ -19,4 +21,8 @@ def get_orchestrator() -> AIOrchestrator:
     return AIOrchestrator(llm_provider=get_llm_provider())
 
 
-__all__ = ["get_db", "get_llm_provider", "get_orchestrator"]
+def get_language_detector() -> LanguageDetectionService:
+    return _language_detector
+
+
+__all__ = ["get_db", "get_llm_provider", "get_orchestrator", "get_language_detector"]

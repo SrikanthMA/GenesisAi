@@ -98,6 +98,26 @@ body {
   min-width: 0;
 }
 
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.chat-header select {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
 .messages {
   flex: 1;
   overflow-y: auto;
@@ -127,6 +147,15 @@ body {
 
 .bubble.streaming {
   opacity: 0.85;
+}
+
+.lang-badge {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
 }
 
 .error-banner {

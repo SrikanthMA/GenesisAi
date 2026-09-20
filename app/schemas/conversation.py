@@ -13,6 +13,7 @@ class MessageRead(BaseModel):
     id: str
     role: str
     content: str
+    language: str | None
     created_at: datetime
 
 

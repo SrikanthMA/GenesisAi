@@ -13,11 +13,17 @@ export interface MessageRead {
   id: string;
   role: string;
   content: string;
+  language: string | null;
   created_at: string;
 }
 
 export interface ConversationDetail extends ConversationSummary {
   messages: MessageRead[];
+}
+
+export interface LanguageInfo {
+  code: string;
+  name: string;
 }
 
 async function json<T>(response: Response): Promise<T> {
@@ -45,6 +51,21 @@ export function getConversation(id: string): Promise<ConversationDetail> {
 
 export function stopGeneration(id: string): Promise<{ stopped: boolean }> {
   return fetch(`${API_BASE}/conversations/${id}/stop`, { method: "POST" }).then((r) => json(r));
+}
+
+export function listLanguages(): Promise<LanguageInfo[]> {
+  return fetch(`${API_BASE}/languages`).then((r) => json(r));
+}
+
+export function setConversationLanguage(
+  id: string,
+  language: string,
+): Promise<ConversationSummary> {
+  return fetch(`${API_BASE}/conversations/${id}/language`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ language }),
+  }).then((r) => json(r));
 }
 
 interface SseEvent {
