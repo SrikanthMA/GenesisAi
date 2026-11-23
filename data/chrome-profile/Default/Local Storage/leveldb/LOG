@@ -1,0 +1,6 @@
+2026/11/12-17:20:55.778 1b68 Reusing MANIFEST C:\Users\srika\OneDrive\Documents\Genesis\data\chrome-profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/11/12-17:20:55.780 1b68 Recovering log #4
+2026/11/12-17:20:55.849 1b68 Reusing old log C:\Users\srika\OneDrive\Documents\Genesis\data\chrome-profile\Default\Local Storage\leveldb/000004.log 
+2026/11/12-17:25:57.712 67c0 Level-0 table #8: started
+2026/11/12-17:25:57.750 67c0 Level-0 table #8: 43189 bytes OK
+2026/11/12-17:25:57.754 67c0 Delete type=0 #4

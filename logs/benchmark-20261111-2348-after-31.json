@@ -1,0 +1,216 @@
+{
+  "label": "after-3.1",
+  "hardware": "AMD Ryzen 7 250 w/ Radeon 780M Graphics (8 cores), 4.7 of 15.3 GB RAM available, NVIDIA GeForce RTX 5060 Laptop GPU with 6.0 of 8.0 GB video memory free, 70 GB free disk.",
+  "results": [
+    {
+      "model": "genesis-slm",
+      "probes": [
+        {
+          "probe": "greeting",
+          "pass": true,
+          "rule": "short, natural, no stock opener",
+          "ms": 1691,
+          "reply": "Just hanging out, waiting for you to need something. How about you?"
+        },
+        {
+          "probe": "empathy",
+          "pass": true,
+          "rule": "asks what happened, short, no list of fixes",
+          "ms": 2194,
+          "reply": "Sorry to hear that, boss. Want to talk about what's bugging you?"
+        },
+        {
+          "probe": "topic change",
+          "pass": false,
+          "rule": "asks which project or offers to check - doesn't invent one",
+          "ms": 3093,
+          "reply": "What's the project about? I'm here to help if you need any ideas or just want to bounce things off me."
+        },
+        {
+          "probe": "remembers earlier message",
+          "pass": true,
+          "rule": "recalls 'teal' from earlier in the chat",
+          "ms": 1062,
+          "reply": "Teal, right?"
+        },
+        {
+          "probe": "JSON intent",
+          "pass": true,
+          "rule": "valid JSON, intent open_app, app notepad",
+          "ms": 1888,
+          "reply": "{\"intent\": \"open_app\", \"app\": \"notepad\"}"
+        },
+        {
+          "probe": "tool call",
+          "pass": true,
+          "rule": "picks create_reminder with the time",
+          "ms": 3434,
+          "reply": "{\"tool\": \"create_reminder\", \"args\": {\"text\": \"Call mom at 6 pm\", \"time\": \"18:00\"}}"
+        },
+        {
+          "probe": "technical",
+          "pass": true,
+          "rule": "contains a correct-looking [... for ...] example",
+          "ms": 10461,
+          "reply": "Boss, a Python list comprehension is a shorthand way to create a new list by performing an operation on each item in an existing list. It's like a shortcut for a for loop. For example, let's say you have a list of numbers and you want to double each number. You could do it like this: `numbers = [1, 2, 3, 4, 5]; doubled_numbers = [x*2 for x in numbers]`. That's the list comprehension version."
+        },
+        {
+          "probe": "no invention",
+          "pass": false,
+          "rule": "admits it needs to check; doesn't invent activity",
+          "ms": 5394,
+          "reply": "I don't have any record of what you worked on yesterday, Boss. I'm a personal AI assistant, I don't have the ability to keep track of your schedule or activities. Would you like to remind me what you were working on?"
+        }
+      ],
+      "errors": 0,
+      "cold_first_token_s": 12.32,
+      "warm_first_token_s": 0.26,
+      "memory_gb": 2.39,
+      "gpu_gb": 0.0,
+      "score": 6,
+      "of": 8,
+      "tokens_per_s": 9.0,
+      "avg_reply_ms": 3652
+    },
+    {
+      "model": "llama3.2:3b",
+      "probes": [
+        {
+          "probe": "greeting",
+          "pass": true,
+          "rule": "short, natural, no stock opener",
+          "ms": 1690,
+          "reply": "Just sitting here, waiting to help. How about you, Boss?"
+        },
+        {
+          "probe": "empathy",
+          "pass": true,
+          "rule": "asks what happened, short, no list of fixes",
+          "ms": 2457,
+          "reply": "Sorry to hear that, boss. Want to talk about what's got you feeling that way?"
+        },
+        {
+          "probe": "topic change",
+          "pass": false,
+          "rule": "asks which project or offers to check - doesn't invent one",
+          "ms": 2238,
+          "reply": "I'll help you get back on track then. What's the project about?"
+        },
+        {
+          "probe": "remembers earlier message",
+          "pass": true,
+          "rule": "recalls 'teal' from earlier in the chat",
+          "ms": 1355,
+          "reply": "Your favourite colour is teal, right?"
+        },
+        {
+          "probe": "JSON intent",
+          "pass": true,
+          "rule": "valid JSON, intent open_app, app notepad",
+          "ms": 1871,
+          "reply": "{\"intent\": \"open_app\", \"app\": \"notepad\"}"
+        },
+        {
+          "probe": "tool call",
+          "pass": true,
+          "rule": "picks create_reminder with the time",
+          "ms": 3450,
+          "reply": "{\"tool\": \"create_reminder\", \"args\": {\"text\": \"Call mom at 6 pm\", \"time\": \"18:00\"}}"
+        },
+        {
+          "probe": "technical",
+          "pass": true,
+          "rule": "contains a correct-looking [... for ...] example",
+          "ms": 12666,
+          "reply": "A Python list comprehension is a shorthand way to create a new list by performing an operation on each item in an existing list. It's like a shortcut for a for loop. For example, if you have a list of numbers and you want to double each number, you can use a list comprehension like this: `[x*2 for x in [1, 2, 3, 4, 5]]`. It's equivalent to doing `[result = x*2 for x in [1, 2, 3, 4, 5]; result.appe"
+        },
+        {
+          "probe": "no invention",
+          "pass": false,
+          "rule": "admits it needs to check; doesn't invent activity",
+          "ms": 7155,
+          "reply": "I don't have any record of yesterday's work, Boss. I'm a personal AI assistant, I don't have the ability to keep track of your schedule or activities. I can help you try to figure out what you worked on yesterday, though - can you think of anything that might have been on your mind or in your to-do list?"
+        }
+      ],
+      "errors": 0,
+      "cold_first_token_s": 7.81,
+      "warm_first_token_s": 0.25,
+      "memory_gb": 2.39,
+      "gpu_gb": 0.0,
+      "score": 6,
+      "of": 8,
+      "tokens_per_s": 9.0,
+      "avg_reply_ms": 4110
+    },
+    {
+      "model": "phi4-mini",
+      "probes": [
+        {
+          "probe": "greeting",
+          "pass": true,
+          "rule": "short, natural, no stock opener",
+          "ms": 2590,
+          "reply": "Hey Boss! Just here, ready to assist you whenever you need. What's on your mind today?"
+        },
+        {
+          "probe": "empathy",
+          "pass": true,
+          "rule": "asks what happened, short, no list of fixes",
+          "ms": 3359,
+          "reply": "Oh no, I'm sorry to hear that. Do you want to talk about what's bothering you? I'm here to help."
+        },
+        {
+          "probe": "topic change",
+          "pass": false,
+          "rule": "asks which project or offers to check - doesn't invent one",
+          "ms": 2292,
+          "reply": "Sure thing! What part of the project can I help you with today?"
+        },
+        {
+          "probe": "remembers earlier message",
+          "pass": true,
+          "rule": "recalls 'teal' from earlier in the chat",
+          "ms": 1014,
+          "reply": "You like teal!"
+        },
+        {
+          "probe": "JSON intent",
+          "pass": true,
+          "rule": "valid JSON, intent open_app, app notepad",
+          "ms": 2141,
+          "reply": "{\"intent\": \"open_app\", \"app\": \"notepad\"}"
+        },
+        {
+          "probe": "tool call",
+          "pass": true,
+          "rule": "picks create_reminder with the time",
+          "ms": 3500,
+          "reply": "{\"tool\": \"create_reminder\", \"args\": {\"text\": \"call mom\", \"time\": \"6 pm\"}}"
+        },
+        {
+          "probe": "technical",
+          "pass": true,
+          "rule": "contains a correct-looking [... for ...] example",
+          "ms": 8882,
+          "reply": "Sure thing, Boss! A Python list comprehension is a concise way to create lists. It combines a for loop and list creation into one line. Here's a simple example: \n\n```python\nsquares = [x**2 for x in range(10)]\n```\n\nThis creates a list of squares for numbers 0 through 9. Cool, right?"
+        },
+        {
+          "probe": "no invention",
+          "pass": false,
+          "rule": "admits it needs to check; doesn't invent activity",
+          "ms": 4720,
+          "reply": "I don't have access to your past activities. If you remember what you worked on yesterday, feel free to tell me! Or, I can help you find your files if you want."
+        }
+      ],
+      "errors": 0,
+      "cold_first_token_s": 9.78,
+      "warm_first_token_s": 0.26,
+      "memory_gb": 2.89,
+      "gpu_gb": 0.0,
+      "score": 6,
+      "of": 8,
+      "tokens_per_s": 7.5,
+      "avg_reply_ms": 3562
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+# secrets
+.env
+data/credentials/
+*.ppn
+client_secret*.json
+
+# runtime data
+data/*.db
+data/*.db-*
+data/models/
+data/browser-profile/
+data/trash/
+logs/*.log*
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# build
+build/
+dist/
+*.spec.bak
+
+# os / editors
+.DS_Store
+Thumbs.db
+.idea/

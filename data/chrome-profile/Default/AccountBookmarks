@@ -1,0 +1,92 @@
+{
+   "checksum": "5296f8eac5f48edb4a4492f998d3c9d7",
+   "roots": {
+      "bookmark_bar": {
+         "children": [  ],
+         "date_added": "13436825772585301",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "5",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13354461983983744",
+            "date_last_used": "0",
+            "guid": "01bfd261-cd5d-460a-bd0a-c1a5c523ab3e",
+            "id": "8",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Online Python Compiler (Interpreter)",
+            "type": "url",
+            "url": "https://www.programiz.com/python-programming/online-compiler/"
+         }, {
+            "date_added": "13368288566514896",
+            "date_last_used": "0",
+            "guid": "afb29554-0dde-4407-b1c8-d38c180944f5",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Stay Secure Online with Advanced Antivirus Software",
+            "type": "url",
+            "url": "https://free.webcompanion.com/minime/nl/en/thank-you.php"
+         }, {
+            "date_added": "13371052418589776",
+            "date_last_used": "0",
+            "guid": "9a6c3e91-079a-4290-a311-a998e0878524",
+            "id": "10",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Shiroko - Free Anime and Manga Streaming",
+            "type": "url",
+            "url": "https://shiroko.co/en"
+         }, {
+            "date_added": "13387895641519851",
+            "date_last_used": "0",
+            "guid": "b65200c4-946b-44dc-90c4-81c46e2e2821",
+            "id": "11",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Big O Calc",
+            "type": "url",
+            "url": "https://www.bigocalc.com/"
+         }, {
+            "date_added": "13421494928440654",
+            "date_last_used": "0",
+            "guid": "ca6d4e7f-2afc-49b4-bc43-9f171e67403c",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "bisudon | Dontpad",
+            "type": "url",
+            "url": "https://dontpad.com/bisudon"
+         } ],
+         "date_added": "13436825772585301",
+         "date_last_used": "0",
+         "date_modified": "13421494928440654",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "6",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13436825772585301",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "7",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CnAKUAiIgQISSiAAkgE2CjQKDmNocm9tZV9zeW5jX2JtEgU1MSFibRoSCS/NNu0SYAYAES/NNu0SYAYAKZx0N+0SYAYA6gEMCKnQ1tcGENjljNICEgAqGHZ4V1VJdDUwRjdPMERaWUpxWjMvb3c9PUgDEqkBCAUSpAEKHHl4Si82ZnZrZWNyN2twNUVRekI0dFdMcGRiRT0STlo6QURxdEFad1g2ekpJVEZDRkpYZjdwN3QvU0ttR3JnLzhxRmdNdFloc1FzWSttV0R3Wk1KL0hSWDAxRWNZNWZXMUdXNEFCeFBHTEZtKxgAIAAoADD+9ub3hOiWAzgAQABKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1lAAAAABLBAQgGErwBChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EmZaOkFEcXRBWnoyMUV5SmJZMVk3R1U4OXV5M1FhUE5RRC94SGNXakkxWWxTcnhabEVZMXZzNVluQ2pwc2hFWnpTTzd6YURDU0h6OGxYdyt3ZEFETE1FTU5mVk8xZTAybWw4N3RBPT0YACAAKAAw/vbm94TolgM4AEAAShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9ZQAAAAAS6wEICBLmAQocNjdtSVZsd1pyWE1MQnh2M2xla1lZSHpod0dRPRJmWjpBRHF0QVp4TFNzZVhUWFZkWUFVb2s4akU5WWNmM085MzNIcFdhdmZjL3RlWGRsYVFEeFhBKzYvQ1ZkMEZOemx1SnpEa294L3VDemMwWis5NzVQejJZaWN4NnBxWVBCcnhydz09GAAgASgBMK73k/uoxJcDOPCZgJriMUDh4JuElTRKHE1CK2JiZWFyNGwweHJXVWNhYzRTSU9VR21yYz1aHiIcOHpXOTJUanB6S3k5cUkxbC9xMzFTcS81dlQwPWXCZrW5EusBCAkS5gEKHEpsUUxvSXZBU2V2OTY0aW14emI0MmJONTdWMD0SZlo6QURxdEFaeExTc2VYVFhWZFlBVW9rOGpFOVljZnR1QVhpUHdnSTlsWGlicTVvZmJMRmZQMXpCZlloNFNnc1h6M1BkZnFuWWdvM012ZTQvNjUwczZEUUVnSHcwT3FsamxkQXc9PRgAIAAoADCS+NPMrIGIAzjz6YPblTJA8+mD25UyShxBenB5U0tuTHQzeUlORkVtTU5yYkhiNElNSjQ9Wh4iHE53UktDYWd4a29jZWU0N0V2bERrZmhpYnBUYz1l90JK1hLrAQgKEuYBChxjVDg4YXE5Q29xSjhxaW8rQ2VxM0wwQkI3cWs9EmZaOkFEcXRBWnhMU3NlWFRYVmRZQVVvazhqRTlZY2Yzekg4azF3L09GeURoRGprMGovQTJ2YUhNdTlqN3UzSnM2ZEZuWmJBYWZ4WkZoL2QvZS82a3JENTBZdWQydzBZdUhvMTNnPT0YACAAKAAwurv/qYfKiAM4nfz3gKAyQJ3894CgMkocR3luaDBIZ3JSZXIvOS9lakx4b0liSFBBalgwPVoeIhxZSUNVZmx6V2dsa1RveDBVNDRXRG9aNjRsQzQ9Zdq4A0wS7AEICxLnAQocOTVtenZ2SStqcC9hMmN3UklOSlpQd3MzREdVPRJmWjpBRHF0QVp4TFNzZVhUWFZkWUFVb2s4akU5WWNmeEg5QVVBVTNIamhYV3dUcEJLMnlidlFsRWQ1dVFXeDFDS01obnhRU0hoQU81WUlHRkxqMHVPVFIzWDFrdFNKSno0UUZrQT09GAAgACgAMMW0/5uhtIwDOLPbtODeMkCz27Tg3jJKHFNVclNPRnk2emlMdUdpcWRieHFucFhjQ1JkRT1aHyIdrEhvY2lhYUZBbnZrRkIzdlBMSU9JRm9LekRKaz1lm7w/TRLsAQgMEucBChxkV1BXQkZ6cWQ1RGVaZ2tiRUhzYlhmZmV0NGM9EmZaOkFEcXRBWnhMU3NlWFRYVmRZQVVvazhqRTlZY2ZHSU9zM293MHlncUVFaGd5bFV4QTF1UTZVYmlQTTBXZWpNTzlBSGJ0Y3NzUnd2UHgzWE1hWXRVWEJYUmQ3VER6V3dZeitnPT0YACAAKAAwrv+fqZCGlAM4uLjm9dszQLi45vXbM0ocMUkvcUlVQ3d6emFMaFFlYUtrZDkwcU12K1VBPVofIh3WTjkwd1hVWVVKdGlkNkJ4K2tzMlloWW9zcjdZPWWSLR47EsEBCAcSvAEKHG5qZ0R1ODhlQ3J2WHA4NnBEN2ZIR2NxRnA4OD0SZlo6QURxdEFaeGoxVUxjaGYyU3RiaUlNbU10UTlWZTBXMkV5S1NSQ0NobFhuM1QyNU5mZ2xxODdrWUY1N0FLaFpaVXBKV1prZ2FoT3EzMHNOVFE4UmlleWZzZ1dHSFE1aHJqNVE9PRgAIAAoADD+9ub3hOiWAzgAQABKHHl6TkIwMWNuNTRBN2NSVTB1VCsvUGdtVHRVbz1lAAAAADABOAA=",
+   "version": 1
+}

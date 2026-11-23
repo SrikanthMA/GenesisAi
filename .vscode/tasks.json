@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Genesis: First-time setup (venv + dependencies + models)",
+      "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/setup_windows.ps1",
+      "problemMatcher": []
+    },
+    {
+      "label": "Genesis: Run desktop app",
+      "type": "shell",
+      "command": ".venv/Scripts/python.exe -m genesis",
+      "problemMatcher": []
+    },
+    {
+      "label": "Genesis: Run tests",
+      "type": "shell",
+      "command": ".venv/Scripts/python.exe -m pytest -q",
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Genesis: Download voice models",
+      "type": "shell",
+      "command": ".venv/Scripts/python.exe scripts/download_models.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "Genesis: Doctor",
+      "type": "shell",
+      "command": ".venv/Scripts/python.exe -m genesis --doctor",
+      "problemMatcher": []
+    },
+    {
+      "label": "Genesis: Build Windows executable",
+      "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/build_windows.ps1",
+      "problemMatcher": []
+    }
+  ]
+}

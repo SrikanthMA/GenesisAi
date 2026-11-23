@@ -1,0 +1,81 @@
+﻿Genesis 3 diagnostics
+version : 3.5.0
+mode    : {'mode': 'hybrid', 'external_ai_allowed': True, 'memory': 'local'} | cloud voice allowed: True
+provider: None | Suzanne: None | Andrew: None
+  import ok  genesis.core.config
+  import ok  genesis.ai.llm.factory
+  import ok  genesis.tools.registry
+  import ok  genesis.nlp.rules
+  import ok  genesis.memory.embeddings
+  import ok  genesis.core.container
+  import ok  genesis.v2.voice_ai
+  import ok  genesis.v2.images
+hooks applied: ['config', 'factory', 'registry', 'rules', 'embeddings', 'container', 'v2_voice', 'v2_images']
+voice classes with a cloud switch: ['SmartSTT']
+  understands 'check my local AI setup'                               -> ('follow_up', 'local_ai_status')
+  understands 'i want to order pizza'                                 -> ('follow_up', 'twin_order')
+  understands 'write an IEEE paper on solar energy'                   -> ('follow_up', 'draft_document')
+  understands 'open wikipedia on black holes and copy it into word'   -> ('follow_up', 'wikipedia_to_word')
+  understands 'create an excel sheet for my expenses'                 -> ('office', None)
+  understands 'write a calculator in python in vs code'               -> ('follow_up', 'code_in_vscode')
+  understands 'write a bar chart of iris in colab'                    -> ('follow_up', 'code_in_colab')
+warnings: none
+python.exe : ........E..E...................................................................................................................invalid pdf header: b'not a'
+At line:136 char:1
++ & $py -m unittest tests.test_v3 tests.test_v3_work tests.test_v3_frid ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (........E..E......eader: b'not a':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+EOF marker not found
+......................................................................s.
+======================================================================
+ERROR: test_patcher_apply_check_remove (tests.test_v3.TestHooks.test_patcher_apply_check_remove)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\srika\OneDrive\Documents\Genesis\tests\test_v3.py", line 512, in test_patcher_apply_check_remove
+    cfg.write_text("".join(ln for ln in cfg.read_text().splitlines(keepends=True) if "v3 hook" not in ln))
+                                        ^^^^^^^^^^^^^^^
+  File "C:\Users\srika\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1028, in read_text
+    return f.read()
+           ^^^^^^^^
+  File "C:\Users\srika\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 8554: character maps to <undefined>
+
+======================================================================
+ERROR: test_factory_builds_local_provider (tests.test_v3.TestIntegration.test_factory_builds_local_provider)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\srika\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 633, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 
+'C:\\Users\\srika\\AppData\\Local\\Temp\\tmppzca9jpd\\data\\genesis_local.db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\srika\OneDrive\Documents\Genesis\tests\test_v3.py", line 583, in test_factory_builds_local_provider
+    with tempfile.TemporaryDirectory() as d, mock.patch.dict(os.environ, {**ENV_LOCAL, "GENESIS_LLM_PROVIDER":
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\srika\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\srika\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\srika\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\srika\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\srika\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 635, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+  File "C:\Users\srika\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 909, in onexc
+    _os.unlink(path)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 
+'C:\\Users\\srika\\AppData\\Local\\Temp\\tmppzca9jpd\\data\\genesis_local.db'
+
+----------------------------------------------------------------------
+Ran 201 tests in 62.868s
+
+FAILED (errors=2, skipped=1)

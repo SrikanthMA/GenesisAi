@@ -1,0 +1,42 @@
+# secrets
+.env
+data/credentials/
+*.ppn
+client_secret*.json
+
+# runtime data
+data/*.db
+data/*.db-*
+data/models/
+data/browser-profile/
+data/trash/
+data/backups/
+logs/*.log*
+
+# secrets that must never be committed (any env/credential variants)
+.env.*
+!.env.example
+*.pem
+*.key
+token*.json
+credentials*.json
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# build
+build/
+dist/
+*.spec.bak
+
+# os / editors
+.DS_Store
+Thumbs.db
+.idea/

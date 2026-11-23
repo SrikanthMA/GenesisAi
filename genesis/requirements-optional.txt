@@ -1,0 +1,16 @@
+# Optional capabilities — install what you want:  pip install -r requirements-optional.txt
+
+# Neural sentence embeddings for the knowledge base (all-MiniLM-L6-v2). Pulls in PyTorch (~200 MB CPU build).
+sentence-transformers>=2.7
+
+# Visible browser automation (click / fill / read pages). After installing run:  playwright install chromium
+playwright>=1.44
+
+# Search-result summaries (Genesis always opens the results in your browser; this lets it also read them)
+ddgs>=9.0
+
+# .docx reading for the knowledge base / read_file
+python-docx>=1.1
+
+# Picovoice Porcupine wake-word engine (needs a free access key + custom "Hey Genesis" .ppn)
+pvporcupine>=3.0

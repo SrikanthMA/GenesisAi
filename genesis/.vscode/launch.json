@@ -1,0 +1,63 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Genesis: Desktop app",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "genesis",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Genesis: Desktop app (dry-run power actions)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "genesis",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "env": { "GENESIS_SYSTEM_DRY_RUN": "1" },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Genesis: Terminal chat (CLI)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "genesis",
+      "args": ["--cli"],
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Genesis: Terminal + voice",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "genesis",
+      "args": ["--cli", "--voice"],
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Genesis: Doctor (check setup)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "genesis",
+      "args": ["--doctor"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Genesis: Run all tests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["-q"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
